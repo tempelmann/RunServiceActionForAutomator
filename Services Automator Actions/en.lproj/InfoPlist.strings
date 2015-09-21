@@ -1,0 +1,15 @@
+/* AMApplication localized strings */
+
+AMName = "Run Service";
+
+/* AMDefaultParameters localized values */
+/* e.g. myDefaultIntegerParameter = 0; */
+/* e.g. myDefaultStringParameter = "Default String Value"; */
+
+/* AMDescription localized strings */
+AMDInput = "";
+AMDNote = "";
+AMDOptions = "";
+AMDResult = "";
+AMDSummary = "Invokes a Service (Services operate on selected text and files and are shown in the application's menu bar and in right-click menus)";
+AMDWebsite = "http://apps.tempel.org/RunServiceActionForAutomator";

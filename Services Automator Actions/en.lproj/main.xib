@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Services_Automator_Actions">
+            <connections>
+                <outlet property="view" destination="47Y-Ci-255" id="o5G-uR-uJ9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="47Y-Ci-255" userLabel="View">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pd9-if-xY3">
+                    <rect key="frame" x="18" y="94" width="94" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Service Name:" id="6aM-7n-tlU">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0q-GS-wRA">
+                    <rect key="frame" x="118" y="92" width="262" height="22"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="rDW-OO-enN">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="aFj-Nx-tzi" name="value" keyPath="selection.serviceName" id="xt4-v6-6O9"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-UU-3zg">
+                    <rect key="frame" x="18" y="57" width="94" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Input Type:" id="DpA-OB-t3M">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="38n-JK-fX7" userLabel="Input Type">
+                    <rect key="frame" x="116" y="51" width="125" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="Automatic" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="KA7-t3-6sf" id="frK-4o-09f">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="85p-Jm-8Lp">
+                            <items>
+                                <menuItem title="Automatic" state="on" id="KA7-t3-6sf"/>
+                                <menuItem title="None" id="sDa-gf-fBQ"/>
+                                <menuItem title="Text" id="npx-xY-bq7"/>
+                                <menuItem title="Files &amp; Folders" id="U6S-O6-fUc"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="aFj-Nx-tzi" name="selectedIndex" keyPath="selection.inputType" id="xGN-1n-abg"/>
+                    </connections>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D21-ss-5mp">
+                    <rect key="frame" x="18" y="20" width="94" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Output Type:" id="9NC-ap-Kqz">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4G8-yv-kKn" userLabel="Output Type">
+                    <rect key="frame" x="116" y="14" width="125" height="26"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="F30-k7-KYo">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="6kJ-Fs-lBN">
+                            <items>
+                                <menuItem title="Automatic" id="TBv-lZ-ufU"/>
+                                <menuItem title="Text" id="22L-2I-WNM"/>
+                                <menuItem title="Files &amp; Folders" id="7uO-QV-m5e"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="aFj-Nx-tzi" name="selectedIndex" keyPath="selection.outputType" id="vdE-Ad-ooF"/>
+                    </connections>
+                </popUpButton>
+            </subviews>
+            <constraints>
+                <constraint firstItem="D21-ss-5mp" firstAttribute="width" secondItem="CBK-UU-3zg" secondAttribute="width" id="3CW-cu-drB"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="38n-JK-fX7" secondAttribute="trailing" constant="20" symbolic="YES" id="3D5-gT-JQr"/>
+                <constraint firstItem="Pd9-if-xY3" firstAttribute="leading" secondItem="CBK-UU-3zg" secondAttribute="leading" id="FFr-bN-Ftu"/>
+                <constraint firstItem="F0q-GS-wRA" firstAttribute="leading" secondItem="38n-JK-fX7" secondAttribute="leading" id="FqA-yJ-Qte"/>
+                <constraint firstItem="Pd9-if-xY3" firstAttribute="baseline" secondItem="F0q-GS-wRA" secondAttribute="baseline" id="Kg8-lI-GEh"/>
+                <constraint firstItem="F0q-GS-wRA" firstAttribute="leading" secondItem="Pd9-if-xY3" secondAttribute="trailing" constant="8" symbolic="YES" id="Lp5-eD-uMx"/>
+                <constraint firstItem="Pd9-if-xY3" firstAttribute="top" secondItem="47Y-Ci-255" secondAttribute="top" constant="20" symbolic="YES" id="LvF-mY-8Vy"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4G8-yv-kKn" secondAttribute="trailing" constant="20" symbolic="YES" id="Ng1-YJ-dw5"/>
+                <constraint firstItem="CBK-UU-3zg" firstAttribute="baseline" secondItem="38n-JK-fX7" secondAttribute="baseline" id="RNd-iS-aeE"/>
+                <constraint firstItem="F0q-GS-wRA" firstAttribute="leading" secondItem="4G8-yv-kKn" secondAttribute="leading" id="SR4-zO-ec1"/>
+                <constraint firstAttribute="bottom" secondItem="D21-ss-5mp" secondAttribute="bottom" constant="20" symbolic="YES" id="Sr5-U0-dtm"/>
+                <constraint firstItem="CBK-UU-3zg" firstAttribute="top" secondItem="Pd9-if-xY3" secondAttribute="bottom" constant="20" id="W4h-8Q-bga"/>
+                <constraint firstItem="D21-ss-5mp" firstAttribute="top" secondItem="CBK-UU-3zg" secondAttribute="bottom" constant="20" id="WDq-1C-yaT"/>
+                <constraint firstItem="Pd9-if-xY3" firstAttribute="leading" secondItem="D21-ss-5mp" secondAttribute="leading" id="hH0-8r-htH"/>
+                <constraint firstAttribute="trailing" secondItem="F0q-GS-wRA" secondAttribute="trailing" constant="20" symbolic="YES" id="m7k-Hl-g46"/>
+                <constraint firstItem="Pd9-if-xY3" firstAttribute="leading" secondItem="47Y-Ci-255" secondAttribute="leading" constant="20" symbolic="YES" id="m9V-d0-x0s"/>
+                <constraint firstItem="D21-ss-5mp" firstAttribute="width" secondItem="Pd9-if-xY3" secondAttribute="width" id="nSM-qE-YG9"/>
+                <constraint firstItem="D21-ss-5mp" firstAttribute="baseline" secondItem="4G8-yv-kKn" secondAttribute="baseline" id="nin-wg-DiR"/>
+            </constraints>
+            <point key="canvasLocation" x="405" y="490.5"/>
+        </customView>
+        <objectController id="aFj-Nx-tzi" userLabel="Parameters">
+            <declaredKeys>
+                <string>serviceName</string>
+                <string>inputType</string>
+                <string>outputType</string>
+            </declaredKeys>
+            <connections>
+                <binding destination="-2" name="contentObject" keyPath="parameters" id="qGz-hI-LN2"/>
+            </connections>
+        </objectController>
+    </objects>
+</document>
