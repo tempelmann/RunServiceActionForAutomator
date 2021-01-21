@@ -23,3 +23,7 @@ Thomas Tempelmann
 ### Example of using the "Run Service" action in Automator in order to invoke the "Summarize" Service.
 
 ![Run Service](Docs/RunService2.png "Example of using the 'Run Service' action")
+
+### Invoking DEVONthink 3 services
+
+Even though services of [https://www.devontechnologies.com](DEVONthink 3) appear as "DEVONthink 3: …", you need to use "DEVONthink Pro: …" as the service name for this automator action, or the service may not be found.
